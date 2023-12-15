@@ -10,9 +10,9 @@ namespace CRUD.Datos
         public Conexion()
         {
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json").Build();
+                .AddJsonFile("appsettings.Development.json").Build();
 
-            cadenaSQL = builder.GetSection("ConnectionString:CadenaSQL").Value;
+            cadenaSQL = builder.GetSection("ConnectionStrings:CadenaSQL").Value;
         }
 
 
